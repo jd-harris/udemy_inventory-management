@@ -13,12 +13,6 @@ import res_1  # Import resources file
 import pyqt_themes
 
 
-def resource_path(relative_path):
-    """ Get absolute path to resource, works for dev and for Pyinstaller """
-    base_path = getattr(sys, '_MEIPASS', path.dirname(path.abspath(__file__)))
-    return path.join(base_path, relative_path)
-
-
 # LOAD UI into Python ISSUE***
 # CONVERTING UI file to Python works better
 # from PySide2.QtUiTools import QUiLoader
@@ -29,6 +23,12 @@ def resource_path(relative_path):
 # window = loader.load("main.ui", None)
 x = 0
 idx = 2
+
+
+def resource_path(relative_path):
+    """ Get absolute path to resource, works for dev and for Pyinstaller """
+    base_path = getattr(sys, '_MEIPASS', path.dirname(path.abspath(__file__)))
+    return path.join(base_path, relative_path)
 
 
 class Main(QtWidgets.QMainWindow, main.Ui_MainWindow):
@@ -48,8 +48,8 @@ class Main(QtWidgets.QMainWindow, main.Ui_MainWindow):
         self.previous_btn.clicked.connect(self.PREVIOUS)
         self.next_btn.clicked.connect(self.NEXT)
         self.last_btn.clicked.connect(self.LAST)
-        self.theme1_btn.clicked.connect(self.CHANGE_THEME(1))
-        self.theme2_btn.clicked.connect(self.CHANGE_THEME(2))
+        self.theme1_btn.clicked.connect(self.CHANGE_THEME1)
+        self.theme2_btn.clicked.connect(self.CHANGE_THEME2)
 
     def GET_DATA(self):
         # Connect to Sqlite3 database and fill GUI table with data
@@ -316,14 +316,15 @@ class Main(QtWidgets.QMainWindow, main.Ui_MainWindow):
 
         db.commit()
 
-    def CHANGE_THEME(self, buttonNumb):
-        # if buttonNumb == 1:
-        #     main.QtWidgets.QApplication.styleSheet = pyqt_themes.classic
-        #     main.QtWidgets.QApplication.setStyleSheet(main.QtWidgets.QApplication.styleSheet) #nopep8
-        # if buttonNumb == 2:
-        #     main.QtWidgets.QApplication.setStyleSheet(self, pyqt_themes.darkBlue) #nopepe8
-        #     self.setStyleSheet(pyqt_themes.darkBlue)
-        pass
+    def CHANGE_THEME1(self):
+        self.setStyleSheet(pyqt_themes.classic)
+        self.update()
+        print("Theme 1")
+
+    def CHANGE_THEME2(self):
+        self.setStyleSheet(pyqt_themes.darkBlue)
+        self.update()
+        print("Theme 2")
 
 
 if __name__ == '__main__':

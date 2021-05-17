@@ -3,7 +3,7 @@
 # Form implementation generated from reading ui file 'main.ui',
 # licensing of 'main.ui' applies.
 #
-# Created: Sun May 16 20:22:43 2021
+# Created: Mon May 17 17:35:08 2021
 #      by: pyside2-uic  running on PySide2 5.13.2
 #
 # WARNING! All changes made in this file will be lost!
@@ -804,11 +804,6 @@ class Ui_MainWindow(object):
         self.id.setText("")
         self.id.setObjectName("id")
         self.gridLayout_8.addWidget(self.id, 1, 1, 1, 1)
-        self.label_17 = QtWidgets.QLabel(self.frame_4)
-        self.label_17.setText("")
-        self.label_17.setPixmap(QtGui.QPixmap(":/1/Juniper.jpg"))
-        self.label_17.setObjectName("label_17")
-        self.gridLayout_8.addWidget(self.label_17, 1, 4, 1, 1)
         self.gridLayout_7.addWidget(self.frame_4, 0, 0, 1, 1)
         self.tabWidget.addTab(self.tab_2, "")
         self.gridLayout_2.addWidget(self.tabWidget, 1, 0, 1, 3)

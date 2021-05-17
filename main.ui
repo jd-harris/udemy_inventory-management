@@ -1058,16 +1058,6 @@ color: rgb(255, 0, 255)</string>
                 </property>
                </widget>
               </item>
-              <item row="1" column="4">
-               <widget class="QLabel" name="label_17">
-                <property name="text">
-                 <string/>
-                </property>
-                <property name="pixmap">
-                 <pixmap resource="../udemy_inventory-management/res_1.qrc">:/1/Juniper.jpg</pixmap>
-                </property>
-               </widget>
-              </item>
              </layout>
             </widget>
            </item>
@@ -1123,7 +1113,7 @@ color: rgb(255, 0, 255)</string>
   <widget class="QStatusBar" name="statusbar"/>
  </widget>
  <resources>
-  <include location="../udemy_inventory-management/res_1.qrc"/>
+  <include location="res_1.qrc"/>
  </resources>
  <connections/>
 </ui>
