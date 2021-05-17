@@ -318,13 +318,11 @@ class Main(QtWidgets.QMainWindow, main.Ui_MainWindow):
 
     def CHANGE_THEME1(self):
         self.setStyleSheet(pyqt_themes.classic)
-        self.update()
-        print("Theme 1")
+        # self.update()
 
     def CHANGE_THEME2(self):
         self.setStyleSheet(pyqt_themes.darkBlue)
-        self.update()
-        print("Theme 2")
+        # self.update()
 
 
 if __name__ == '__main__':
