@@ -13,6 +13,10 @@
   <property name="windowTitle">
    <string>Parts Inventory Manager</string>
   </property>
+  <property name="windowIcon">
+   <iconset resource="res_1.qrc">
+    <normaloff>:/1/user-business-boss.png</normaloff>:/1/user-business-boss.png</iconset>
+  </property>
   <property name="styleSheet">
    <string notr="true">QToolTip
 {

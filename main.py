@@ -3,7 +3,7 @@
 # Form implementation generated from reading ui file 'main.ui',
 # licensing of 'main.ui' applies.
 #
-# Created: Mon May 17 17:35:08 2021
+# Created: Wed May 19 14:14:16 2021
 #      by: pyside2-uic  running on PySide2 5.13.2
 #
 # WARNING! All changes made in this file will be lost!
@@ -16,6 +16,10 @@ class Ui_MainWindow(object):
     def setupUi(self, MainWindow):
         MainWindow.setObjectName("MainWindow")
         MainWindow.resize(986, 752)
+        icon = QtGui.QIcon()
+        icon.addPixmap(QtGui.QPixmap(":/1/user-business-boss.png"),
+                       QtGui.QIcon.Normal, QtGui.QIcon.Off)
+        MainWindow.setWindowIcon(icon)
         MainWindow.setStyleSheet("QToolTip\n"
                                  "{\n"
                                  "     border: 1px solid black;\n"

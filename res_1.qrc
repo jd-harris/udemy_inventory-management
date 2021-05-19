@@ -1,5 +1,6 @@
 <RCC>
   <qresource prefix="1">
+    <file>user-business-boss.png</file>
     <file>Juniper.jpg</file>
   </qresource>
 </RCC>
